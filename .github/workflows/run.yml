@@ -2,7 +2,8 @@ name: Run Macro Pulse
 
 on:
   schedule:
-    - cron: '0 * * * *' # 매시간 정각에 실행 (UTC 기준)
+    - cron: '0 8 * * 1-5' # KR 시장 마감 (17:00 KST / 08:00 UTC)
+    - cron: '30 21 * * 1-5' # US 시장 마감 (06:30 KST 다음날 / 21:30 UTC)
   workflow_dispatch:      # 수동으로도 실행 가능하게 설정
 
 jobs:
